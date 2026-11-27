@@ -46,7 +46,7 @@ spec:
             restartPolicy: Never
             containers:
             - name: task
-              image: public.ecr.aws/docker/library/busybox:1.36
+              image: registry.k8s.io/e2e-test-images/busybox:1.36.1-1
               command: [sh, -c, "exit 0"]
     - apply:
         resource:
@@ -60,7 +60,7 @@ spec:
           spec:
             containers:
             - name: task
-              image: public.ecr.aws/docker/library/busybox:1.36
+              image: registry.k8s.io/e2e-test-images/busybox:1.36.1-1
               command: [sleep, "3600"]
     - apply:
         resource:
@@ -75,7 +75,7 @@ spec:
             restartPolicy: Never
             containers:
             - name: task
-              image: public.ecr.aws/docker/library/busybox:1.36
+              image: registry.k8s.io/e2e-test-images/busybox:1.36.1-1
               command: [sh, -c, "exit 0"]
     - assert:
         timeout: 3m
